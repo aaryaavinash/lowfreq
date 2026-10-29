@@ -1,6 +1,6 @@
 // The listening bar: back counter, record wall, neon, valve amp, counter + twelve stools, pendants.
-import { THREE } from '../../src/core/engine.js';
-import { bakeTexture, fbmNormal } from '../../src/core/textures.js';
+import { THREE } from './core/engine.js';
+import { bakeTexture, fbmNormal } from './core/textures.js';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
 
 export const WALL_Z = -0.42;          // face of the record shelves

@@ -1,12 +1,11 @@
 import './tailwind.css';
-import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
-import { Assets, BASE } from '../../src/core/assets.js';
-import { Pointer } from '../../src/core/input.js';
-import { smoothScroll, gsap, reveal } from '../../src/core/scroll.js';
-// ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
-import { preloader, cursor, magnetic } from '../../src/core/ui.js';
-import { PlanarReflection } from '../../src/core/reflector.js';
-import { VolumetricSpotEffect } from '../../src/core/volumetric.js';
+import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from './core/engine.js';
+import { Assets, BASE } from './core/assets.js';
+import { Pointer } from './core/input.js';
+import { smoothScroll, gsap, reveal } from './core/scroll.js';
+import { preloader, cursor, magnetic } from './core/ui.js';
+import { PlanarReflection } from './core/reflector.js';
+import { VolumetricSpotEffect } from './core/volumetric.js';
 import { DepthOfFieldEffect, EffectPass } from 'postprocessing';
 import { buildDeck, BANDS, L } from './deck.js';
 import { buildRoom, WALL_Z, FLOOR_Y } from './room.js';
@@ -114,11 +113,11 @@ const loader = preloader({
     grooveEls.forEach((c, i) => { c.style.opacity = v * 26 > i ? 1 : 0.08; });
   },
 });
-const texLoad = name => assets.texture(`img/lowfreq/${name}.webp`);
+const texLoad = name => assets.texture(`img/${name}.webp`);
 const COVER_NAMES = ['aubergine', 'tidal', 'counter', 'rain', 'valves', 'geometry'];
 const loads = {
-  tt: assets.gltf('models/lowfreq/turntable.glb'),
-  sp: assets.gltf('models/lowfreq/speaker.glb'),
+  tt: assets.gltf('models/turntable.glb'),
+  sp: assets.gltf('models/speaker.glb'),
   covers: Promise.all(COVER_NAMES.map(texLoad)),
 };
 
@@ -668,7 +667,7 @@ const fakeSpec = new Float32Array(SPEC.length);
 
 // ─── Catalogue sleeves ────────────────────────────────────────────────────────
 $$('.sleeve').forEach(el => {
-  el.querySelector('.sl-cover').style.backgroundImage = `url(${BASE}img/lowfreq/${el.dataset.img}.webp)`;
+  el.querySelector('.sl-cover').style.backgroundImage = `url(${BASE}img/${el.dataset.img}.webp)`;
   const art = el.querySelector('.sl-art');
   el.addEventListener('pointermove', e => {
     const r = art.getBoundingClientRect();
@@ -680,7 +679,6 @@ $$('.sleeve').forEach(el => {
 });
 
 // ─── Boot ─────────────────────────────────────────────────────────────────────
-// ORIGINAL (preserved, not deleted — disabled by comment): worldNav('lowfreq', { theme: 'dark', corner: 'bl' });
 const cur = cursor({ color: '#eadcff', blend: 'normal', size: 30 });
 magnetic();
 smoothScroll({ lerp: 0.08 });

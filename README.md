@@ -1,16 +1,101 @@
+<p align="center"><img src="docs/banner.svg" alt="Low Frequency themed project banner" width="100%"></p>
+
 # Low Frequency
 
-A standalone [Dioramas](https://github.com/blendi-remade/dioramas) world. This repository opens **Low Frequency** directly at `/`.
+*A listening bar in Shimokitazawa*
+
+A twelve-seat listening bar and record-label concept in Tokyo. Records, sleeves, room tone, and the moment before the needle lands form the experience.
+
+The planned project address is `https://lowfreq.aarya.cyou/`. The site is an interactive concept; its booking, purchase, or application invitations do not complete real transactions.
+
+## The idea
+
+This project treats music as an atmosphere to enter. Its selected scenes move from **Aubergine Hours** to **Shimokita Rain**, giving the central subject several different scales and moods. The result is a designed world rather than a catalogue of screens.
+
+<p align="center"><img src="docs/chapters.svg" alt="Four themed chapters from Low Frequency" width="100%"></p>
+
+## Four scenes
+
+| No. | Scene | Place in the story |
+| --- | --- | --- |
+| 1 | **Aubergine Hours** | A record for the room after dark. |
+| 2 | **Tidal Room** | A slower current of sound. |
+| 3 | **Counter Culture** | An edge in the catalogue. |
+| 4 | **Shimokita Rain** | The city heard through a window. |
+
+These scenes are a selection from the full site. The page also contains supporting editorial sections and a closing invitation.
+
+## Visual language
+
+Midnight violet, lavender light, amber lamps, and display type give the page the intimacy of a room built for listening.
+
+The color plate below records the project's ground, ink, accent, and secondary tone. The type families in the design are Syne · Space Mono · Zen Kaku Gothic New.
+
+<p align="center"><img src="docs/palette.svg" alt="Low Frequency color and typography plate" width="100%"></p>
+
+## The site
+
+The experience is built for the browser, with a visual scene that responds to the page and pointer. Its text remains arranged as a readable sequence of sections. The screenshot below shows the opening composition.
+
+<p align="center"><img src="docs/media/lowfreq.webp" alt="Opening screen of the Low Frequency website" width="100%"></p>
+
+<p align="center"><sub>Opening scene captured from the original project.</sub></p>
+
+## Built with
+
+| Part | Tools |
+| --- | --- |
+| Site and build | JavaScript, Vite, Tailwind CSS, custom CSS |
+| Three-dimensional scene | Three.js and project-specific shaders/models |
+| Motion and scrolling | GSAP, ScrollTrigger, Lenis |
+| Hosting configuration | Cloudflare Pages, `wrangler.jsonc` |
+
+The site is one project at the repository root. The current application is in `src/`; render, asset, input, scroll, and UI utilities are in `src/core/`. Old collection material is preserved under `docs/archive/`.
+
+## Run locally
+
+Use Node.js 22.12 or newer:
 
 ```bash
 npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:5190/. The site code is JavaScript in `examples/lowfreq/`, with the shared Three.js engine in `src/core/`. Vite builds the site; Tailwind utilities are available without resetting the original CSS. GSAP and Lenis power its motion and scrolling.
+Vite serves the site at `http://127.0.0.1:5190/`. To build and preview the production output:
 
-Code: MIT. Generated assets: CC BY 4.0. See `LICENSE` and `ASSET-LICENSES.md`.
+```bash
+npm run build
+npm run preview
+```
 
-## Cloudflare Pages
+The build writes to `dist/`; preview serves it at `http://127.0.0.1:5191/`.
 
-Connect this repository to a Pages project. Use `npm run build` as the build command, `dist` as the output directory, and `/` as the root directory. The Pages configuration is in `wrangler.jsonc`. Use a Node.js version supported by Vite 8 (22.12 or newer).
+## Deployment
+
+For Cloudflare Pages, connect the repository's `main` branch. Use `npm run build` as the build command, `dist` as the output directory, and the repository root as the root directory. The React (Vite) preset supplies the build values; `wrangler.jsonc` also records the Pages output directory. The intended address is `https://lowfreq.aarya.cyou/`; DNS and a Pages project must be connected separately before it becomes live.
+
+## Repository guide
+
+| Path | Contents |
+| --- | --- |
+| `index.html` | Single site entry |
+| `src/` | Scene, styles, shaders, and page modules |
+| `src/core/` | Shared rendering and interaction utilities |
+| `public/` | Project models and images |
+| `docs/` | Project art, screenshot, credits, and notices |
+| `docs/archive/` | Preserved earlier collection material |
+| `wrangler.jsonc` | Cloudflare Pages output configuration |
+
+## Rights and credits
+
+The repository has separate rights scopes. Reuse rights for one part do not extend to the others:
+
+| Material | Terms |
+| --- | --- |
+| Adapted source code | [MIT license](LICENSE), with the original copyright retained |
+| New project SVGs and original presentation | [Low Frequency content notice](LICENSE-LOWFREQ.md) |
+| Zyrix Dev name and marks, where referenced | [Zyrix Dev brand notice](LICENSE-ZYRIXDEV.md) |
+| Models, source images, and the screenshot | [Asset licenses](docs/ASSET-LICENSES.md) |
+| Libraries and web fonts | [Third-party notices](docs/THIRD-PARTY-NOTICES.md) |
+
+The source project and contributors are acknowledged in [Credits](docs/CREDITS.md). The original source copyright remains in [LICENSE](LICENSE).

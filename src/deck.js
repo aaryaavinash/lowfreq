@@ -1,7 +1,7 @@
 // The deck: Meshy turntable with its tonearm cut free (so it can cue), a procedural vinyl record with
 // anisotropic grooves cut from the actual audio, a printed label, and a spectrum halo around the platter.
-import { THREE } from '../../src/core/engine.js';
-import { bakeTexture } from '../../src/core/textures.js';
+import { THREE } from './core/engine.js';
+import { bakeTexture } from './core/textures.js';
 
 // Measured in the turntable mesh's local (quantised) space.
 export const L = {

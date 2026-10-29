@@ -1,0 +1,22 @@
+// ORIGINAL (preserved, not deleted — disabled by comment): previous nested paths
+// import { THREE } from '../../src/core/engine.js';
+// import { bakeTexture, fbmNormal } from '../../src/core/textures.js';
+// import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
+// import { Assets, BASE } from '../../src/core/assets.js';
+// import { Pointer } from '../../src/core/input.js';
+// import { smoothScroll, gsap, reveal } from '../../src/core/scroll.js';
+// // ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+// import { preloader, cursor, magnetic } from '../../src/core/ui.js';
+// import { PlanarReflection } from '../../src/core/reflector.js';
+// import { VolumetricSpotEffect } from '../../src/core/volumetric.js';
+// const texLoad = name => assets.texture(`img/lowfreq/${name}.webp`);
+//   tt: assets.gltf('models/lowfreq/turntable.glb'),
+//   sp: assets.gltf('models/lowfreq/speaker.glb'),
+//   el.querySelector('.sl-cover').style.backgroundImage = `url(${BASE}img/lowfreq/${el.dataset.img}.webp)`;
+// // ORIGINAL (preserved, not deleted — disabled by comment): worldNav('lowfreq', { theme: 'dark', corner: 'bl' });
+// import { THREE } from '../../src/core/engine.js';
+// import { bakeTexture } from '../../src/core/textures.js';
+//   <link rel="stylesheet" href="./examples/lowfreq/style.css">
+//   <script type="module" src="./examples/lowfreq/main.js"></script>
+// // ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from './core/ui.js';
+// // ORIGINAL (preserved, not deleted — disabled by comment): worldNav('lowfreq', { theme: 'dark', corner: 'bl' });

@@ -1,8 +1,8 @@
-# 11 · Low Frequency — "Put your hand on the record"
+# Low Frequency — "Put your hand on the record"
 Brand: **Low Frequency** — a Tokyo-style listening bar and record label.
 
 ## Signature interaction
-A turntable (`models/lowfreq/turntable.glb`) you can play. Overlay a procedural vinyl record (fine grooves: anisotropic-looking
+A turntable (`models/turntable.glb`) you can play. Overlay a procedural vinyl record (fine grooves: anisotropic-looking
 rotating radial highlight, printed label) and animate it. **Press play → the record spins up and music plays**: synthesize an
 original lo-fi house/jazz loop in WebAudio (kick, snare, hats, bass, Rhodes-like chords) rendered into an AudioBuffer via
 OfflineAudioContext, played by an AudioBufferSourceNode. **Drag the record to scratch**: playbackRate follows drag angular
